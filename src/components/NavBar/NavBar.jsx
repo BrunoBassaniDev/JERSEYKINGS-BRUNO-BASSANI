@@ -1,37 +1,42 @@
 import React from "react";
 import "./Navbar.css";
 import Cartwidget from "../CartWidget/Cartwidget";
+import { Link, NavLink} from "react-router-dom"
 
 const Navbar = () => {
     return (
         <header>
             <nav class="navbar navbar-expand-lg navbar-light ">
                 <div class="container-fluid">
-                    <a className="Nombre" class="navbar-brand" href="#">
-                        JerseyKings
-                    </a>
+                                <Link to= "/">
+                                    <img className= "LogoJerseyKings"  src="./img/JerseyKings.png" alt="Logo" />
+                                </Link>
                     <div class="collapse navbar-collapse" id="navbarText">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Argentina
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <NavLink to= "/categoria/España">
                                     España
-                                </a>
+                                </NavLink>
                             </li>
+
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                            <NavLink to= "/categoria/Alemania">
                                     Alemania
-                                </a>
+                                </NavLink>
                             </li>
+
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Inglaterra
-                                </a>
+                            <NavLink to= "/categoria/Argentina">
+                                    Argentina
+                                </NavLink>
                             </li>
+
+                            <li class="nav-item">
+                            <NavLink to= "/categoria/Italia">
+                                    Inglaterra
+                                </NavLink>
+                            </li>
+
                         </ul>
 
                     </div>
@@ -43,4 +48,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default Navbar

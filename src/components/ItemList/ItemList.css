@@ -1,0 +1,8 @@
+.contenedorCamisetas {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h3{
+    font-size: 20px;
+}
