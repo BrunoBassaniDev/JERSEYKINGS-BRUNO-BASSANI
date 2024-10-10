@@ -6,12 +6,19 @@ header{
     background-color: black;
 }
 
-.nav-item{
+.navbar-nav .nav-item a{
     display: inline-block;
     font-size: 22px;
     margin: 35px;
     margin-right: 45px;
-    margin-left: 45px;
+    margin-left: 75px;
     color: white;
     font-style: italic;
+    text-decoration: none;
 }
+
+.navbar-nav .nav-item a:hover {
+    color: gray; 
+}
+
+
