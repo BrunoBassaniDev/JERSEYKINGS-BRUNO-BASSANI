@@ -1,0 +1,69 @@
+.checkout {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formulario label {
+    font-size: 14px;
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+.formulario input {
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 98%;
+}
+
+.formulario input:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.formulario button {
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+}
+
+.formulario button:hover {
+    background-color: #218838;
+}
+
+.formulario strong {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #28a745;
+}
+
+

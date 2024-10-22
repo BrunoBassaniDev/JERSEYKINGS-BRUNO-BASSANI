@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import Loader from "../Loader/Loader";
 import { db } from "../../services/config";
 import { collection, getDocs, query, where } from "firebase/firestore";
+import "./ItemListContainer.css"
 
 
 const ItemListContainer = () => {
@@ -33,7 +34,9 @@ const ItemListContainer = () => {
 
 return (
     <>
-        <h2 style={{ textAlign: "center" }}>Mis Productos</h2>
+    <div className="titulo">
+    <h2>CAMISETAS DISPONIBLES</h2>
+    </div>
         {loading ? <Loader/> : <ItemList productos={productos}/>}
     </>
 )

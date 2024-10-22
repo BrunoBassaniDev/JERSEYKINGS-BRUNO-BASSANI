@@ -1,0 +1,46 @@
+.titulo{
+    margin: 30px;
+}
+
+.link{
+    text-decoration: none;
+    margin: 46%;
+color: green;    
+font-size: 16px;
+}
+
+.link:hover{
+    color: black;
+}
+
+.producto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    align-items: center;    
+    margin: 35px;
+}
+
+div.info{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 60px;
+
+}
+
+h3{
+    padding: 10px;
+}
+
+.finalizar{
+    margin: 20px;
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+}
+
+.finalizar:hover{
+    color: red;
+}

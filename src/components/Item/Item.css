@@ -8,8 +8,17 @@
     flex-direction: column;
     font-size: 20px;
     align-items: center;
+    text-align: center;
 }
 
+.Link{
+    text-decoration: none;
+    color: black;
+}
+
+.Link:hover{
+    color: red;
+}
 
 .cardProducto img {
     width: 180px;

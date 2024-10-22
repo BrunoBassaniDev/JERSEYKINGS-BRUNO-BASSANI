@@ -2,6 +2,7 @@ import { useState, useContext } from "react"
 import { CarritoContext } from "../../context/CarritoContext"
 import { db } from "../../services/config"
 import { collection, addDoc, updateDoc, doc, getDoc } from "firebase/firestore"
+import "./Checkout.css"
 const Checkout = () => {
     const [nombre, setNombre] = useState("")
     const [apellido, setApellido] = useState("")
@@ -74,14 +75,15 @@ const Checkout = () => {
             <form onSubmit={manejadorFormulario}>
                 {
                     carrito.map(producto => (
-                        <div key={producto.item.id}>
+                        <div className="checkout" key={producto.item.id}>
                             <p>{producto.item.nombre}</p>
-                            <p>{producto.item.precio} x {producto.cantidad}</p>
-                            <p>{producto.item.precio}</p>
+                            <p>Cantidad: {producto.cantidad}</p>
+                            <p>Precio x unidad: {producto.item.precio}</p>
                             <hr />
                         </div>
                     ))
                 }
+                <div className="formulario">
                 <div>
                     <label htmlFor=""> Nombre </label>
                     <input type="text" onChange={(e) => setNombre(e.target.value)} value={nombre} />
@@ -111,6 +113,7 @@ const Checkout = () => {
                         <strong>¡Gracias por tu compra! Tu numero de orden es: {ordenId}</strong>
                     )
                 }
+                </div>
             </form>
 
         </div>

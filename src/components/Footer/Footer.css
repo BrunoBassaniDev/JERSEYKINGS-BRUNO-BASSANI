@@ -1,0 +1,17 @@
+footer {
+    background-color: #000000;
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+    padding: 50px;
+  }
+  footer a {
+    color: #fff;
+    font-size: 50px;
+    letter-spacing: 15px;
+    text-decoration: none;
+    margin: 30px;
+  }
+  footer a:hover {
+    color: #615858;
+  }
