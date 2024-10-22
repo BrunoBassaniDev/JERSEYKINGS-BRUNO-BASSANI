@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 import { useState, createContext } from "react";
 
 export const CarritoContext = createContext({
@@ -5,20 +6,15 @@ export const CarritoContext = createContext({
     total: 0,
     cantidadTotal: 0,
 });
-
 export const CarritoProvider = ({ children }) => {
     const [carrito, setCarrito] = useState([]);
     const [total, setTotal] = useState(0);
     const [cantidadTotal, setCantidadTotal] = useState(0);
 
-    console.log(carrito);
-
     const agregarAlCarrito = (item, cantidad) => {
         const productoExistente = carrito.find((prod) => prod.item.id === item.id);
-
         if (!productoExistente) {
             setCarrito((prev) => [...prev, { item, cantidad }]);
-
             setCantidadTotal((prev) => prev + cantidad);
             setTotal((prev) => prev + item.precio * cantidad);
         } else {
@@ -34,11 +30,9 @@ export const CarritoProvider = ({ children }) => {
             setTotal((prev) => prev + item.precio * cantidad);
         }
     };
-
     const eliminarProducto = (id) => {
         const productoEliminado = carrito.find((prod) => prod.item.id === id);
         const carritoActualizado = carrito.filter((prod) => prod.item.id !== id);
-
         setCarrito(carritoActualizado);
         setCantidadTotal((prev) => prev - productoEliminado.cantidad);
         setTotal(
@@ -46,12 +40,12 @@ export const CarritoProvider = ({ children }) => {
                 prev - productoEliminado.item.precio * productoEliminado.cantidad
         );
     };
-
     const vaciarCarrito = () => {
         setCarrito([]);
         setCantidadTotal(0);
         setTotal(0);
-    };
+            }
+        
 
     return (
         <CarritoContext.Provider

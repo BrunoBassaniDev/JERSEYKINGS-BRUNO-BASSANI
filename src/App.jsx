@@ -5,6 +5,10 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CarritoProvider } from "./context/CarritoContext";
 import Cart from "./components/cart/cart";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Checkout from "./components/Checkout/Checkout";
 
 const App = () => {
   return (
@@ -19,11 +23,12 @@ const App = () => {
               element={<ItemListContainer />}
             />
             <Route path="/item/:idItem" element={<ItemDetailContainer />} />
-            <Route path="/Cart" element={<Cart/>}/>
-            {/* <Route path="/checkout" element={<Checkout/>}/> */}
-            <Route path="#" element={<h2>Sitio en construccion</h2>}/>
+            <Route path="/cart" element={<Cart/>}/>
+            <Route path="/checkout" element={<Checkout/>}/>
+            <Route path="*" element={ <h2> Página no disponible</h2> }/>
           </Routes>
         </CarritoProvider>
+        <ToastContainer />
       </BrowserRouter>
     </>
   );
